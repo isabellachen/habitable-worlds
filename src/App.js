@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import ReactTooltip from 'react-tooltip'
+import FlipMove from 'react-flip-move';
+
 import rocket from './rocket.png'
 import World from './world'
 
@@ -23,7 +25,8 @@ class App extends Component {
     if (this.props.loading) return <h1>loading...</h1>
     else {
       return (
-        Object.keys(this.props.worlds).map((name) => {
+        <FlipMove duration={750} easing="ease-out">
+        {Object.keys(this.props.worlds).map((name) => {
           return <World key={worlds[name].name} world={worlds[name]}/>
         }).sort((a,b) => {
           //sort the array of react elements
@@ -31,7 +34,8 @@ class App extends Component {
           if (worlds[a.key].habitability < worlds[b.key].habitability) return 1
           if (typeof worlds[a.key].habitability === 'number' && typeof worlds[b.key].habitability === 'string') return -1
           if (typeof worlds[a.key].habitability === 'string' && typeof worlds[b.key].habitability === 'number') return 1
-        })
+        })}
+        </FlipMove>
       )
     }
   }

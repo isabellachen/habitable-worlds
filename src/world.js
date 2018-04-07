@@ -14,8 +14,8 @@ class World extends Component {
       <div className="world-wrapper">
         <img src={world.poster}></img>
         <div className="world-info">
-          <h3>{world.name}</h3>
-          <ul>
+          <h3 className="world-name">{world.name}</h3>
+          <ul className="world-attributes">
             <li>star: {world.star}</li>
             <li>atmosphere: {world.atmosphere}</li>
             <li>temperature: {world.temperature}</li>

@@ -1,36 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
 ul {
   padding-left: 0;
 }
 
 h1 {
   flex: 3;
+  font-family: 'Lobster', cursive;
+  font-size: 60px;
+  margin: 0;
 }
 
 img {
-  height: 300px;
+  height: 250px;
 }
 
 button {
   background: url('./rocket.png') no-repeat center;
   background-size: 40px;
-  width: 80px;
-  height: 80px;
-  border: 10px solid #000;
-  border-radius: 25px;
+  width: 90px;
+  height: 90px;
+  border: 5px solid #000;
+  border-radius: 50px;
   background-color: #000;
   color: #00fff9;
 }
-
-/* button {
-    background: url(/static/media/rocket.896b4189.png) no-repeat center;
-    background-size: 40px;
-    width: 80px;
-    height: 80px;
-    border: 10px solid #000;
-    border-radius: 25px;
-    background-color: #000;
-    color: #ffe100;
-} */
 
 .App {
   display: flex;
@@ -53,17 +47,27 @@ button {
 }
 
 .world-info {
-  display: flex;
-  flex-direction: column;
+  padding-left: 50px;
+  width: 100%;
+}
+
+.world-name {
+  font-size: 30px;
+  border-bottom: solid 1px;
+  margin: 0px;
+}
+
+.world-attributes {
+  margin: 10px 0 0 0;
 }
 
 @keyframes glowing {
-  0% { box-shadow: 0 0 -10px #00c4bf; }
-  40% { box-shadow: 0 0 20px #00c4bf; }
-  60% { box-shadow: 0 0 20px #00c4bf; }
-  100% { box-shadow: 0 0 -10px #00c4bf; }
+  0% { box-shadow: 0 0 -20px #00c4bf; }
+  40% { box-shadow: 0 0 50px #00c4bf; }
+  60% { box-shadow: 0 0 50px #00c4bf; }
+  100% { box-shadow: 0 0 -20px #00c4bf; }
 }
 
 .button-glow {
-  animation: glowing 5000ms infinite;
+  animation: glowing 3000ms infinite;
 }
