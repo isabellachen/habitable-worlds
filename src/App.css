@@ -11,13 +11,26 @@ img {
 }
 
 button {
-  flex: 1;
-  background: url('./rocket.png') no-repeat;
-  background-size: 60px;
-  width: 70px;
-  border: none;
-  padding: 0;
+  background: url('./rocket.png') no-repeat center;
+  background-size: 40px;
+  width: 80px;
+  height: 80px;
+  border: 10px solid #000;
+  border-radius: 25px;
+  background-color: #000;
+  color: #00fff9;
 }
+
+/* button {
+    background: url(/static/media/rocket.896b4189.png) no-repeat center;
+    background-size: 40px;
+    width: 80px;
+    height: 80px;
+    border: 10px solid #000;
+    border-radius: 25px;
+    background-color: #000;
+    color: #ffe100;
+} */
 
 .App {
   display: flex;
@@ -25,7 +38,7 @@ button {
 }
 
 .main {
-  width: 50%;
+  width: 40%;
 }
 
 .header {
@@ -42,4 +55,15 @@ button {
 .world-info {
   display: flex;
   flex-direction: column;
+}
+
+@keyframes glowing {
+  0% { box-shadow: 0 0 -10px #00c4bf; }
+  40% { box-shadow: 0 0 20px #00c4bf; }
+  60% { box-shadow: 0 0 20px #00c4bf; }
+  100% { box-shadow: 0 0 -10px #00c4bf; }
+}
+
+.button-glow {
+  animation: glowing 5000ms infinite;
 }

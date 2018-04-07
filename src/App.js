@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import ReactTooltip from 'react-tooltip'
 import rocket from './rocket.png'
 import World from './world'
 
@@ -47,9 +48,11 @@ class App extends Component {
         <div className="main">
           <div className="header">
             <h1>Star Scanner</h1>
-            <button onClick={this.calcHabitabilityForAllWorlds}>
-
-            </button>
+            <button
+              data-tip="run calculations!"
+              onClick={this.calcHabitabilityForAllWorlds}
+              className="button-glow"></button>
+            <ReactTooltip />
           </div>
           <div className="worlds-container">
             {this.renderWorlds()}
