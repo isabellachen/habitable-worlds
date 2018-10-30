@@ -40,3 +40,5 @@ function habitabilityCalculator() {
 - Uses gh-pages to publish on github pages
 - `npm run deploy` to publish on github pages, config is in package.json
 - remove __REDUX_DEVTOOLS_EXTENSION__ before deploying, otherwise it will break for Safari.
+
+...
